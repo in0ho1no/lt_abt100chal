@@ -59,3 +59,19 @@
     "builder" はサポートされているビルダーの 1 つです。 例: html, latex, または linkcheck。       
 
     PS D:\work\Py\26lt_read100challenge\lt_abt100chal> 
+
+revealjsを利用する為に、source/conf.pyのextensionsリストへ以下追記する
+
+   'sphinx_revealjs',
+
+## スライド作成
+
+### ビルド
+
+ルートディレクトリで以下コマンドを実行
+
+    .\docs\make.bat revealjs
+
+出力される以下ファイルをダブルクリックすれば、ブラウザでプレビューできる
+
+    \docs\build\revealjs\index.html

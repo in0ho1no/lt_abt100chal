@@ -13,7 +13,9 @@ author = "inoinoino"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    "sphinx_revealjs",
+]
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -25,3 +27,11 @@ language = "ja"
 
 html_theme = "alabaster"
 html_static_path = ["_static"]
+
+revealjs_style_theme = "beige"
+revealjs_script_plugins = [
+    {
+        "name": "RevealNotes",
+        "src": "revealjs/plugin/notes/notes.js",
+    },
+]
