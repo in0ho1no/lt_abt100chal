@@ -110,3 +110,13 @@ revealjsを利用する為に、source/conf.pyのextensionsリストへ以下追
 Github Actionsのワークフローを用意する
 
     .github\workflows\deploy.yml
+
+### HTMLページの表示
+
+Github Actionに成功してから以下ページへアクセスすると、HTMLページへのリンクを確認できる。（Visit siteを押下してもよい）
+
+    https://github.com/in0ho1no/lt_abt100chal/settings/pages
+
+今回のリポジトリでは以下がリンクとなる
+
+    https://in0ho1no.github.io/lt_abt100chal/
