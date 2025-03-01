@@ -75,3 +75,38 @@ revealjsを利用する為に、source/conf.pyのextensionsリストへ以下追
 出力される以下ファイルをダブルクリックすれば、ブラウザでプレビューできる
 
     \docs\build\revealjs\index.html
+
+### デプロイ
+
+※ この設定は最初に行っておけば、以降自動化できる。
+
+まずはPython環境をファイル出力しておく
+
+    uv pip freeze > requirements.txt
+
+対象のリポジトリでsettings - pagesを開いて、Build and deployment の SourceにGithub actionsを選択しておく
+
+    https://github.com/in0ho1no/lt_abt100chal/settings/pages
+
+以下へアクセスしてトークンを用意する
+
+    https://github.com/settings/tokens
+
+実施する操作は以下の通り
+
+- 「Generate new token(Classic)」を押下
+- 「Scope」に「Repo」を選択する
+- 「Generate Token」を押下する
+- 表示されるTokenをコピーする
+
+トークンを設定する
+
+- 該当リポジトリの Settings を開く
+- Security - Secrets and variables - Actionsを開く
+- Secretsにて「New repository secret」を押下する
+- Name: 任意の名称を入力する(LT_ABT100CHAL)
+- Secret: 先の手順でコピーしたTokenをペーストする
+
+Github Actionsのワークフローを用意する
+
+    .github\workflows\deploy.yml
